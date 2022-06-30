@@ -8,7 +8,7 @@ pipeline {
         }
         stage('build') {
         steps {
-        sh 'docker run -d --name maven mavcon mvn clean install'
+        sh 'sudo docker run -d --name mavencont maven'
         }
         }
     }
