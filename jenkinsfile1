@@ -8,7 +8,7 @@ pipeline {
         }
         stage('build') {
         steps {
-        sh 'sudo docker start f0c27986b593 mvn clean install'
+        sh 'sudo docker start f0c27986b593'
         }
         }
     }
