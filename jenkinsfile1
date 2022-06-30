@@ -8,7 +8,7 @@ pipeline {
         }
         stage('build') {
         steps {
-        sh 'docker run -d --name mavencont maven mvn clean install'
+        sh 'docker run -d --name mavencontai newmaven mvn clean install'
         }
         }
     }
