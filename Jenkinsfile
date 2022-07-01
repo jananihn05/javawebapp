@@ -13,7 +13,7 @@ pipeline {
         }
         stage('build docker-image') {
             steps {
-                sh 'docker build -t july1artifact -f /var/lib/jenkins/workspace/july1'
+                sh 'docker build -t july1artifact .'
             }   
         }
     }
