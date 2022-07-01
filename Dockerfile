@@ -6,5 +6,5 @@ ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.64/bin/apache-tomcat-9.0.64.ta
 RUN tar -xvzf apache-tomcat-9.0.64.tar.gz
 RUN mv apache-tomcat-9.0.64/* /opt/tomcat
 COPY target/SimpleWebApplication.war /opt/tomcat/webapps
-EXPOSE 8084
+EXPOSE 8080
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
