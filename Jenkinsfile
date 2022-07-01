@@ -13,7 +13,7 @@ pipeline {
         }
         stage('build docker-image') {
             steps {
-                sh 'docker build -t artifactimage:1 .'
+                sh 'docker build -t artifactimage:1.0 .'
             }   
         }
     }
