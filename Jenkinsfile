@@ -13,7 +13,7 @@ pipeline {
         }
         stage('build docker-image') {
             steps {
-                sh 'docker build -t july1artifact .'
+                sh 'docker build -t artifactImage:1 .'
             }   
         }
     }
