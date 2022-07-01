@@ -11,9 +11,9 @@ pipeline {
                 sh 'mvn clean package'
             }   
         }
-        stage('move artifact') {
+        stage('build docker-image') {
             steps {
-                sh 'sudo mv /var/lib/jenkins/workspace/july1/target/SimpleWebApplication.war /home/ec2-user'
+                sh 'docker build -t july1artifact -f /var/lib/jenkins/workspace/july1'
             }   
         }
     }
