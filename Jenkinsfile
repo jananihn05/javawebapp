@@ -13,7 +13,7 @@ pipeline {
         }
         stage('move artifact') {
             steps {
-                sh 'mv /var/lib/jenkins/workspace/july1/target/SimpleWebApplication.war /home/ec2-user'
+                sh 'sudo mv /var/lib/jenkins/workspace/july1/target/SimpleWebApplication.war /home/ec2-user'
             }   
         }
     }
