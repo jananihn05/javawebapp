@@ -1,2 +1,2 @@
 FROM centos:latest
-COPY target/SimpleWebApplication.war
+COPY workspace/july1/targetSimpleWebApplication.war
