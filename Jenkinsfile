@@ -13,7 +13,7 @@ pipeline {
         }
         stage('build docker-image') {
             steps {
-                sh 'docker build julyartifact .'
+                sh 'docker build -t julyartifact .'
             }   
         }
     }
