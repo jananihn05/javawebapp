@@ -19,7 +19,7 @@ pipeline {
         stage('push image to nexus-artifactory') {
             steps {
                 withCredentials([string(credentialsId: 'nexus-july1', variable: 'nexus-july1')]) {
-                    sh 'nexus login -u admin -p ${nexus-july1}'
+                    sh '3.7.71.4 login -u admin -p ${nexus-july1}'
                   }
                 sh 'docker tag artifactimage:1.0 3.7.71.4:8084/artifactimage:1.0'
                 sh 'docker push 3.7.71.4:8084/artifactimage:1.0'
