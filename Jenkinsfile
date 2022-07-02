@@ -18,8 +18,8 @@ pipeline {
         }
         stage('push image to nexus-artifactory') {
             steps {
-                sh 'docker tag artifactimage:1.0 3.7.71.4:8083/artifactimage:1.0'
-                sh 'docker push 3.7.71.4:8083/artifactimage:1.0'
+                sh 'docker tag artifactimage:1.0 3.7.71.4:8084/artifactimage:1.0'
+                sh 'docker push 3.7.71.4:8084/artifactimage:1.0'
             }   
         }
     }
