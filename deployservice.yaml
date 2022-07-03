@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: julyartifact-deployment
+  name: julyartifact
   labels:
     app: tomcat
   namespace: wasim
@@ -14,7 +14,7 @@ spec:
         ports:
         - containerPort: 8080
     metadata:
-      name: julyartifact-deployment
+      name: julyartifact
       labels:
         app: tomcat
   replicas: 1
