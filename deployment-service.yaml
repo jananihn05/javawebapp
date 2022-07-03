@@ -9,7 +9,7 @@ spec:
   template:
     spec:
       containers:
-      - name: artifactimage:1.0
+      - name: artifactimage
         image: 
         ports:
         - containerPort: 8080
