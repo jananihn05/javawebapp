@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: julyartifact-deployment
+  labels:
+    app: tomcat1
+  namespace: wasim
+spec:
+  template:
+    spec:
+      containers:
+      - name: artifactimage
+        image: 
+        ports:
+        - containerPort: 8080
+    metadata:
+      name: julyartifact-deployment
+      labels:
+        app: tomcat1
+  replicas: 3
+  selector:
+    matchLabels:
+      app: tomcat1
