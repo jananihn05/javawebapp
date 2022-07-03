@@ -18,7 +18,7 @@ pipeline {
         }
         stage('push image to nexus-artifactory') {
             steps { 
-                sh 'docker tag artifactimage 65.0.32.52:8085/artifactimage'
+                sh 'docker tag artifactimage:1.0 65.0.32.52:8085/artifactimage'
                 sh 'docker login -u admin -p admin 65.0.32.52:8085'
                 sh 'docker push 65.0.32.52:8085/artifactimage'
             }   
