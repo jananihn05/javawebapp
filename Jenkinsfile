@@ -20,7 +20,7 @@ pipeline {
             steps { 
                 sh 'docker tag artifactimage:1.0 52.66.241.2:8084/artifactimage:1.0'
                 withCredentials([string(credentialsId: 'nexus-login', variable: '')]) {
-                    sh 'docker login -u admin -p $'{nexus-login} 52.66.241.2:8084'
+                    sh 'docker login -u admin -p ${nexus-login} 52.66.241.2:8084'
 }
                 sh 'docker push 52.66.241.2:8084/artifactimage:1.0'
             }   
