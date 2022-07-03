@@ -23,5 +23,8 @@ pipeline {
                 sh 'docker push 52.66.241.2:8084/artifactimage:1.0'
             }   
         }
+        stage('push image to nexus-artifactory') {
+            steps { 
+                kubernetesDeploy (configs: 'deployment-service.yaml', kubeconfigId: 'kubernetes-access-key')
     }
 }
