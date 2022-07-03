@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: julyartifact-deployment
   labels:
-    app: tomcat
+    app: tomcat1
   namespace: wasim
 spec:
   template:
@@ -16,23 +16,23 @@ spec:
     metadata:
       name: julyartifact-deployment
       labels:
-        app: tomcat
+        app: tomcat1
   replicas: 3
   selector:
     matchLabels:
-      app: tomcat
+      app: tomcat1
       
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: tomcat-service
+  name: tomcat1-service
   namespace: wasim
 spec:
   ports:
   - port: 80
     targetPort: 8080
   selector:
-    app: tomcat
+    app: tomcat1
   type: NodePort
