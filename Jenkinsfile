@@ -25,7 +25,7 @@ pipeline {
         }
         stage('deploy image to k8s cluster') {
             steps { 
-                kubernetesDeploy (configs: 'deploy.yml', kubeconfigId: 'new-kube-ver')
+                kubernetesDeploy (configs: 'deployment-service.yaml', kubeconfigId: 'new-kube-ver')
     }
 }
     }
