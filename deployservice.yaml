@@ -1,38 +1,36 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: julyartifact
+  name: tomcat2-deployment
   labels:
-    app: tomcat
-  namespace: wasim
+    app: tomcat2
 spec:
   template:
     spec:
       containers:
-      - name: julyartifact
-        image: artifactimage
+      - name: tomcat2-deployment
+        image: 
         ports:
         - containerPort: 8080
     metadata:
-      name: julyartifact
+      name: tomcat2-deployment
       labels:
-        app: tomcat
+        app: tomcat2
   replicas: 1
   selector:
     matchLabels:
-      app: tomcat
+      app: tomcat2
       
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: tomcat-service
-  namespace: wasim
+  name: tomcat2-service
 spec:
   ports:
   - port: 80
     targetPort: 8080
   selector:
-    app: tomcat
+    app: tomcat2
   type: NodePort
