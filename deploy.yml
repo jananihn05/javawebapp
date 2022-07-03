@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: artifactimage
-        image: 
+        image: julyartifact 
         ports:
         - containerPort: 8080
     metadata:
