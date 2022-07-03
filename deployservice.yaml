@@ -9,7 +9,7 @@ spec:
     spec:
       containers:
       - name: tomcat2-deployment
-        image: 
+        image: artifactimage
         ports:
         - containerPort: 8080
     metadata:
