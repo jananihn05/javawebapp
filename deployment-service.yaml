@@ -17,7 +17,7 @@ spec:
       name: julyartifact-deployment
       labels:
         app: tomcat
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: tomcat
