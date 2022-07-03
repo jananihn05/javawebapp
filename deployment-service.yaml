@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tomcat-deployment
+  labels:
+    app: tomcat
+  namespace: wasim
+spec:
+  template:
+    spec:
+      containers:
+      - name: tomcat-deployment
+        image: tomcat
+        ports:
+        - containerPort: 8080
+    metadata:
+      name: tomcat-deployment
+      labels:
+        app: tomcat
+  replicas: 3
+  selector:
+    matchLabels:
+      app: tomcat
+      
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tomcat-service
+  namespace: wasim
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: tomcat
+  type: NodePort
