@@ -28,3 +28,5 @@ pipeline {
                 kubernetesDeploy (configs: 'deployment-service.yaml', kubeconfigId: 'kubernetes-access-key')
     }
 }
+    }
+}
