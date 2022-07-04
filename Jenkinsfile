@@ -18,9 +18,9 @@ pipeline {
         }
         stage('push image to nexus-artifactory') {
             steps { 
-                sh 'docker tag artifactimage:1.0 13.233.0.28:8090/artifactimage'
-                sh 'docker login -u admin -p admin 13.233.0.28:8090'
-                sh 'docker push 13.233.0.28:8090/artifactimage'
+                sh 'docker tag artifactimage:1.0 65.0.135.232:8090/artifactimage'
+                sh 'docker login -u admin -p admin 65.0.135.232:8090'
+                sh 'docker push 65.0.135.232:8090/artifactimage'
             }   
         }
         stage('deploy image to k8s cluster') {
