@@ -13,7 +13,7 @@ pipeline {
         }
         stage('build docker-image') {
             steps {
-                sh 'docker build -t artifactimage .'
+                sh 'docker build -t artifactimage:1.0 .'
             }   
         }
         stage('push image to nexus-artifactory') {
