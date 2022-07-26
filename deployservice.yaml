@@ -7,9 +7,12 @@ metadata:
 spec:
   template:
     spec:
+      imagePullSecrets:
+      - name: name given for secrets
       containers:
       - name: tomcat2-deployment
         image: javawebapp/artifactimage
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
     metadata:
