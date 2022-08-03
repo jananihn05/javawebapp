@@ -21,4 +21,4 @@ spec:
   selector:
     matchLabels:
       app: tomcat1
-janA
+
